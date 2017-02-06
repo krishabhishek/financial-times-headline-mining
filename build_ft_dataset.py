@@ -14,7 +14,7 @@ offset = 0
 payload = \
     {
         "queryString": "lastPublishDateTime:>2012-01-01T00:00:00Z + \
-            lastPublishDateTime:<2017-01-01T00:00:00Z",
+            lastPublishDateTime:<2017-01-01T00:00:00Z primarySection:'Business'",
         "queryContext": {"curations": ["ARTICLES"]},
         "resultContext": {"offset": offset, "aspects": ["title", "lifecycle"]}
     }
@@ -38,8 +38,8 @@ for offset in range(callsToMake):
 
     payload = \
         {
-            "queryString": "lastPublishDateTime:>2012-01-01T00:00:00Z \
-                lastPublishDateTime:<2017-01-01T00:00:00Z",
+            "queryString": "lastPublishDateTime:>2010-01-01T00:00:00Z \
+                lastPublishDateTime:<2017-01-01T00:00:00Z primarySection:'Business'",
             "queryContext": {"curations": ["ARTICLES"]},
             "resultContext": {
                 "offset": offset,
